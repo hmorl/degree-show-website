@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>entangled</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Rubik Mono One", sans-serif;
+        text-align: center;
+      }
+      h1 {
+        font-size: 10vmin;
+      }
+      #countdown {
+        font-size: 20vmin;
+        line-height: 16vmin;
+      }
+    </style>
   </head>
   <body>
-    entangled.show
+    <h1>entangled</h1>
+
+    <div id="countdown"></div>
+
+    <script>
+      const countdownEl = document.getElementById("countdown");
+      const countDownDate = new Date("Sep 5, 2019 17:00:00");
+
+      render();
+
+      function render() {
+        var now = new Date();
+        setTimeout(render, 1000 - (now % 1000));
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 3600 * 24)) / (1000 * 3600));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownEl.innerHTML =
+          padZero(days, 2) +
+          "d<br> " +
+          padZero(hours, 2) +
+          "h<br> " +
+          padZero(minutes, 2) +
+          "m<br> " +
+          padZero(seconds, 2) +
+          "s ";
+      }
+
+      function padZero(s, len, c) {
+        s = s.toString();
+        c = c || "0";
+        while (s.length < len) s = c + s;
+        return s;
+      }
+    </script>
   </body>
 </html>
