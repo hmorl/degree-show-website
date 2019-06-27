@@ -31,11 +31,10 @@
       const countdownEl = document.getElementById("countdown");
       const countDownDate = new Date("Sep 5, 2019 17:00:00");
 
-      render();
+      setInterval(render, 1000);
 
       function render() {
         var now = new Date();
-        setTimeout(render, 1000 - (now % 1000));
 
         var distance = countDownDate - now;
 
