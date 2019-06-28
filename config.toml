@@ -1,0 +1,30 @@
+baseURL = "/"
+languageCode = "en-GB"
+title = "entangled.show"
+theme = "entangled-theme"
+
+[params]
+    description = "Goldsmiths Computational Arts Degree Show 2019"
+    author = ""
+
+[params.social]
+    [[params.social.list]]
+    class = "fab"
+    icon = "fa-twitter"
+    url = "#"
+
+    [[params.social.list]]
+    class = "fab"
+    icon = "fa-instagram"
+    url = "#"
+
+    [[params.social.list]]
+    class = "fab"
+    icon = "fa-facebook"
+    url = "#"
+
+    [[params.social.list]]
+    class = "fab"
+    icon = "fa-github"
+    url = "#"
+    
