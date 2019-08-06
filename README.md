@@ -1,3 +1,3 @@
-# entangled.show
+# goldcomparts.show
 
-Goldsmith's Computational Art MA/MFA 2019
+Goldsmiths Computational Art MA/MFA 2019

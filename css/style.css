@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'ThreadsMonoGX';
+    src: url(../font/ThreadsMonoGX.ttf);
+    font-weight: 1 999;
+}
+
+html {
+    font-size: 20px;
+    font-family: ThreadsMonoGX;
+}
+
+pre {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(10, 0, 30, 1); 
+    line-height: 1.4em;
+    font-weight: 60;
+    color: rgba(189, 228, 250);
+}
+
+div {
+    display: block;
+    position:static;
+    white-space: pre;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4em;
+    background-color: rgba(10, 0, 30, 1); 
+}
+
+.floating.central {
+    z-index: 999;
+}
+
+.floating.footer {
+    margin: 0;
+    padding: 0;
+    left: 2ch;
+    top: calc(1.4em * 25);
+    z-index: 997;
+}
+
+.floating.header {
+    margin: 0;
+    padding: 0;
+    left: 2ch;
+    top: 1.4em;
+    z-index: 998;
+}
+
+/* bg = main canvas */
+#bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: pre;
+    z-index: -999;
+
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-family: ThreadsMonoGX;
+    display: block;
+    color: rgba(189, 228, 250, 0.6);
+}
+
+#thread {
+    font-weight: 100;
+    position: absolute;
+    color: rgba(252, 0,0);
+}
+
+a {
+    text-decoration: none;
+    color: rgba(189, 228, 250, 1);
+}
+
+a:hover {
+    opacity: 1;
+    font-weight: 100;
+}
+
+/* this is pretty much a no-javascript fallback */
+/* ensures the information is still on the page somehow */
+@media (max-width: 38em) {
+    div{
+        position: static;
+        display: block;
+        margin-left: 2ch;
+    }
+
+    .floating.header {
+        display: inline-block;
+        position: static;
+    }
+    .floating.footer{
+        display: inline-block;
+        position: static;
+    }
+}

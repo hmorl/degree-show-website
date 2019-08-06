@@ -1,65 +1,182 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>entangled</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Rubik Mono One", sans-serif;
-        text-align: center;
-      }
-      h1 {
-        font-size: 10vmin;
-      }
-      #countdown {
-        font-size: 20vmin;
-        line-height: 16vmin;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>entangled</h1>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>So, How Is That Working For You? | Goldsmiths Computational Arts 2019 </title>
+        <script type="text/javascript" src="js/page.js"></script>
+    </head>
 
-    <div id="countdown"></div>
+    <body>
+<pre id = "bg">
+        <!-- Container for the background ascii animation --> 
+</pre>
 
-    <script>
-      const countdownEl = document.getElementById("countdown");
-      const countDownDate = new Date("Sep 5, 2019 17:00:00");
+        <div class = "floating -20,-8 central">
+            So, How Is
+            <span id = "thread">That</span>
+            Working For You?
+        </div>
 
-      setInterval(render, 1000);
+        <div class = "floating -1,-4 central">
+            Goldsmiths
+            Computational Arts
+            Degree Show 2019
+        </div>
 
-      function render() {
-        var now = new Date();
+        <div class = "floating -20,0 central">
+                <span id = "left"><a href="https://www.openstreetmap.org/directions?from=&to=51.47369%2C-0.03806" title="Click for a map" target="_blank">St James Hatcham</a></span>
+                    <span><a href="https://www.openstreetmap.org/directions?from=&to=51.47369%2C-0.03806" title="Click for a map" target="_blank">SE14 6AD</a></span>
+                <span id = "right">5—8 Sept 2019</span>
+        </div>
 
-        var distance = countDownDate - now;
+        <div class = "floating -1,4 central">
+            <a href="https://www.facebook.com/goldsmithscomparts/">FACEBOOK</a>
+            <a href="https://www.instagram.com/goldsmithscomparts/" target="_blank">INSTAGRAM</a>
+            <a href="https://twitter.com/EchoSystemsShow">TWITTER</a>
+        </div>
 
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 3600 * 24)) / (1000 * 3600));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+<pre id = "pattern">
+So,-How-Is-s++osyyysyddoossyNdsyyoo//.--.-+ydNy+::::+mN//::-.............yymo:::
+ThatSo,-How-Is///+////ydoosyms/:://++++oyNNh+---:::::oMy:--:-......---.:+oosd:-:
+Working For Ysu?/+/////ds+yy+/::::///////yh/----::::::oN--::::--::////sy++++s+.-
+....hNhssyN+///////++//hyhd///--::://////hN::-----::///my-:::::-://///ys///+++--
+..::sdyyyhNho+:--..-:/smydo://-.-:::::::oMMo..------::/sm+::::--////++sy////////
+..osyyyyhmy/::-.....---ooyy+/://-::::::::NM+.-------:::/yhyssooo+//+/dNdyooosssy
+:+ossssshNs:-........--smdhdmmyso++oossyhdN::.....-:-:oys///+yyssyhhhdNdhyhdNysy
++++osoo+/+//........../mmo+++sNmhNdyys+//omy::------:++/----:/::::/mmmmmdsoohhhh
+osydo--....-.........-++o+++++dds+/:::::::/hhy+::::os+-.----.::::::hdo+o:---:sMm
+yyhmo..--....:--....-/+///++++ms/::::::::--+syohhooos/-...-.-::---//-------..+No
+o+oso-......----::-:y+/////+++hs/::::::::-ohysssdysoyso-..---:---:h-..------.od/
++++sy/:-..----...-.-mo:::///+odN/:-------./hyhyo++yyhNms-.-----:oyN:----::::::do
+o+oyd+::.........-/dh+:::::oyhss+----....-+ssss+ossyhdddhyhyyyhhmMh--:-:::::::oo
+hdyhdy---....-/++oyhy////osso+oooooodyhysssssssoyyo++oyo+omdsooosmy.------::::/+
+sdysoho/::::+dssoo++oshhy+/++++ooosohmhmhysyyysyy/////////+soooooss+--::::::::ss
+smyysyhdsyooo+++o+oo+ohoo//+++osssssyddysdy+///+o+++/++///ody+////osshdmh+/oshmd
+:dysyyssoyysyo++o++o+oshyssysssssosssydydh--:::::://o+++//+yd//////dyooydhdo++++
+ymsooo+++so++os+/+oo+ooNo++///++++oo+hmhd:--::::/::-::/+///:h////:/s+++oshm////+
+dho+ooooso++++sho:+o+osmyo+////++++++yooh///:://:......////:hy+/+syo//////ds//++
+/yyoooooooo+/+ymo+ooyssymh-:////+ssossooss/////-........-+/omdysyhms://///om/++/
+/omyooooosyyyhmmyyhysosyhd/::::++//++oosydyy+:-..........dyyhooooosmo/////yh/++/
+++oysoo+ymysooosyyssooohhdhyysyy///////+syhy:--........-:yssysooooshdyyyhhys+osy
+///+hs++yo+++oosssyyso++++sysyyh+://///++ods:--.....-::/ossddo+++++/y+++ossoohdd
+/+++oy/+s++++++oshy+/////::::yhyy///////+sy:---..-::shdyyooyh++++++/s+++ooyhosds
++/++so++s+++++shms/////:::::::ddhhhso+oyyh+:---/+o++o+ydhydmhso++++sy+osyhNs-...
+yssy+://ysoyhysoss/:::::::::::hdyhhhhyysssshh/os+/////////sNyssyhdmNhsssyyh-...-
+oos+++/+o+sssooooos+::::--::ohhoso+ydysosoomm+o+/://///////hyyydyssy/+++osyy:...
++++s//++osooo+ooooooo++//+ss+:::///::/--/+oyNho/-::::://////yyh+++++sso+/:/+ho/.
+soos+/++oyoysoooooooo+odmmm:-::////--------:dN+:-::::://::/+hydso+/++oy------:/.
+oooss++/+o+hssssoooo++sNd:-:::////--::::::::sNs/:--:::++osyhysmNy////+s.---:----
+ooos++o//+yhdyyhdhhyshhms.-:::/+:.--:::::::::+myo+osyhhdh+///++md///++/::--.....
+o+oyo+ssys+/ssoooohyshyyN/-:::///.--::::::---:sdNmo++-.---.-++++mm++o/---.......
+hddyhsssy-......-.:yo/::ohh/::///-----------:sdyyd/:-.------:-:/hNmhmd---.......
+yhdsss/----.....----+:::::+dhysyy---....-/osmhhh+--.---:--------dNmhdmdo/:--/o/-
+/////+.----:..-----.o+/:::/+smMMh/::+/////oohyydd--.---:--------sh+//s///++++smN
+/////+------------:/://:::///+MN:///o+////oodmdmN+-..---:------:s///:--:://::+yd
+:////++---..---------:/:::::/oMM+:--:+o+++++hssshd:..--.:-----/mo///--:::::::+/+
+:::///+oh-...--------:/:::://yNm-.---.-:::+mhsssyh:....-.----..dy::/-:::::::-///
+:::////oo:-...-----/oyyoossymNNy..-------::oNdhdmMd+...:......omd//+-:::::::-//:
+/:o::::h::::---:shdNmd/:::::/ymN+-.-------:-+hddy++++osmyo++yhsomd+/:::///:o//+s
+dhhs/osm+---:/+yNh+:::::::::::mMMm:.------.::od/:://///s++shdhsyNh/-::::///ommdo
+NyyssossyyyNddmmo+--::::::::::ydyyyo+++:..../h+----::::://:+yyydNm//:--::+sdmm+/
+++yo+osysoyhysymh+:--::-:-::://----:::/+yyydh+:-::::::::/::syyshmddddyddmNdddhs+
+::ohd+---::/:::/md-------::::+----::::---/dmh+/::::://////omdhsyhdysyshddd+-.---
+:-/my---:::----:/d+.------::+d-----------.os++++/:::::///shdy/---::---:/dy:..---
+-:ho/::--::-:::::/y/...-:osydNo-.---.....omo///++++++++oyddo-.----------smo...--
+ohh::::--:--:::::::dysyss+/:::::++/////+oosdo///+++++oomh/:..----:------sNd+....
+yyds:..--::---::::/sMdhy-........-::+oooo+++ds++++++++om:::...--.-:----:hy++oo--
++++sy.-----:::::///+do+y+-.........-/+++++++hmmdhhyyyhmm-::-.....-----:+//://+:.
++++osy+-.-:::+//+osysshdmdo:-.....--+++++++//+Nmyhmddmdhyo::-..-------:+/://////
+y+///+sh/:::/sysyshshdhyyyddhs:..---/::////+/+mdyooyo::/oNo:::::////+yyo/:////::
+o::////+hyoyhyooo++/oshhhsydmdhyyo-......-.-yms:-------::yNhssyhmmmo+++os//::::/
++/:///::ys+ys+++-....-/osyyyyhdym:..----....dd::::::---::mms++++omd+////++++osyy
+s/:::///ys/oo/+/....--..-/hNmmNhd...--..-...dd:::::::---:m+::::::+dy////////+ohh
+hysoosoos++hd///.....---..:ymdys............hh/::::::----y/-:::::::oo////////++d
++//oydyo++oyN:/...----------:dm:....-......-dd/:::::::::+s/::::-----/o/////++osN
+::::-yy/+++dho+:..-----------oy- ........-sdNdo+//:/+++ommo+/:----..:hho/::-:+ss
+:::::+shysho::/+:---:++/::///sys........-+hmmso+++/++++///++ooo//////hdy........
+:----:-dsohs:://::///+osssysosyy/:://--/sdhdmdyo//////+-:::::::/+ohysyyy/.......
+---..:-/ysydyoo-::::://o++ossos:.--::////++ssyo+/:////oo::::::::-:odyyshm:......
+--..---+oooy+/+/--:::::+++oh/.-:----:+--:::........-::oN:::-:::--/dsoyyNds-..---
+-/////+s+++yo+////::+oooossy+---:----::--:-....--...:::mo::-:---:shyosdyoo:.....
+oyhhyyssy/++so+oosyhdyys/-.--/+::..----:::+.......---..:o+/:+so++ooossyy++/..--:
+////::/::+yoooshosoo+sy:..----+o+:.....-//o-.........--.--ssssso++++oyydy+:..---
+-::---::::+ssosso++++os:..----:::++-...---/d.........-....+////+++++syssds:.....
+::/--::::-ysoso++oooohd/..----:::+oo++/--:oN-............:+//////+ssooo+od+/::/s
+--::-:::::+sss++++osshms:----:-------yysssds+-......--:+shys+:////+oosy:://oooos
+---::------/ooo++ooo:--.....---------oy+/oooshy+++sysyyo+/oy+/+/-..........-oo+o
+---:////::sy+++oyy/........-----:/:/oyso/oyyyyy+s+ss:..----:::o-............ssss
+::/:-::::/ds//o+oo/-...........--sddso+s+ooosoooyyyy-.----::::o+............+mys
+oo:././..yh/o+so+syy/.........../yhyssyhsss+oooooshd:-...---::/m............hho+
+s+--///-:oy++sooosyds...........oy++oso/:::+hooo+osh/-...------y............ydo+
+sy+/--.-+ss+o++oosshhy+/:.....-y+.......::::+soo+oos:---......:d/  ..  .....-yhs
+hyysysso:.-:/o+osoosydshyoosyyy+..-......-:::+ysooyhds+//+o+ooyho-.....------.+s
+</pre>
 
-        countdownEl.innerHTML =
-          padZero(days, 2) +
-          "d<br> " +
-          padZero(hours, 2) +
-          "h<br> " +
-          padZero(minutes, 2) +
-          "m<br> " +
-          padZero(seconds, 2) +
-          "s ";
-      }
+<pre id = "neurons">
+    ...         .         -.                                                                       
+    .            -    .----.                                                                       
+   ..           ..  .:/-.                                                                          
+   .            .yyydd+/s+                                                                         
+........                      .   ..          ./dmNMMN. -oo.                                       
+...                         ...       ...                ....     .. ......-/ydhhdmNd...-s..  .    
+.                                      ...          ...          .-....:++:../oooM.  +o-..--:      
+..                                     .:++/.      ..            .///+o/-.      ./M .+/.--.  .     
+..               -  .            .-::/++d/..-/+/. ...    ....-/osyso/-....        -M//+:+/....     
+.-                -- .  .     .-/+/:/:-+/++ossoshyyyy+o+o:--/ys//-.:.              -N:..-/.   ..   
+-                 .+/::+..-//++:..     -    ......:oys/:+s+o--.....-......        .:M.   .         
+.. .             .smMMMmsoo:..        .             .:::-.- ... ....:...        .. :M.   .         
+...-.        .:odhhddmd..           .              .     ..     ....   ...  ......yN    .          
+.. .-- .:--+::yh..:++y+                            .               ..         .  .hh     .         
+..-:   ./s:-:--od.     -s+.  .                     ..                 ..   ....    .yy     .       
+.---..s-:::+/ydso++.       .+o.   .                                        ...        .om.    .    
+-.....-.-.-od+.              :os:..                .                       :          ..ds.   .   .
+--... ..-/yy.                 .y//-    .           .                       ..        .  :+y+:::-::-
+osoossss+/.-. .                .yo--....          ..                      ..      ..    . .-/++:-. 
+..-.....--                   -d:-//::          -                      .       .      ...   .       
+.-    .-                     :s-..::         .-. .                 .         .        .. .         
+-    ..                       :y/:.....     .:-   .              .          .          .           
+..    .-        ..             ./:/+/...-.  --.    ...          .            .          ...        
+..      ..       .              +.   -ss:.-::: .  ...           .             .            ...     
+...        .-      .   .........  ::   ..:o+//+s... .  .        .              .               -   
+..         -.    .....+y/--:-.-:/......  .:o..:/+....       .               .                ..    
+.         ..    .. +o+.    ...   .  .....+.   +:         ..              .                 ..      
+..        ..   -. s./-. ....    .  .. .+.     s        ...         .                .     -        
+....     .-...  .o..::-::o:  ..... ./.    . o.  .    . .   .    .               .      ..          
+...... - -  /:.--....:-- .    ../      ..+...   .  ........-...            .       -               
+.   :-  o/+/-:-/o+///-////+h....--..+md/::.. .//o+/--:/:  .        ....       ..                   
+.        .    ./  ..+mdhso/+/.::.  .:o+    ...-dms+.:++ods+++s/-::/-. .  ...   .       ..          
+...     .  . .+.. :mMmN:.--.y-.......+---..-..:.-.    ::.    .:-//oso--...    .      .             
+.--.--.-/::.  . ../+ss+ohmddM-..-os-...... :..  .  .. -:....-- ...      ../o/-   .. .   ...  ......
+-..     ./oy+/:oyho-..:. ./dN-....-.::/-.   .   ...   :.-.   /    ..      ..-++:+. ...    . .. ..   
+....... .://///osoyyyo+::/hs .   ....      ...-     .-    .:      ..    ..../hms+/:/:-.-+/...-...  
+..-.-:..--//./----:/hs+..   ...               .    /              ...:ymsooo++o++shs-..  ..        
+..o..    ..      .y-+s/oo/+/o/sdds.        .   .:                .:yy+++oo+-:-:/.:.....            
+.               -s:-..   ./hNMMMh:.      ..../.            .--/++//yy:-::/:/:...:...               
+..-+/+h///////::shNN-.-/:..---:/:o..          :hmN:-.....s.  ... ... .                             
+.-:+...s-  ..... ..h+.....//. ....-s::::------:+.ss-. ..  /h+.    .-                               
+....s.   -o      ..  ++      .+::-...o.    ...... .-.-::-.  :ds/-.   . .                           
+...  o: .  :o        ..+s...    ....-::+o:.....     /  . .::--/.  ..:. ...                         
+...    y. .. s:  .       /o.-    .     ...::/:-.....  /.....  -y:     ..:...                       
+....      +o.  .h.   .     .:s...         .  .. .::-....../..   -++:       .//.                    
+.... .      .s/ .o/.....    ..-h- ..        .      ....  ..:..  .:+.-/-.      .:o...               
+...     ..     ./o+h    .:.  ... /s   .....    .      .......-.. ..o. . .:...    .-+-.             
+...            ..-..yy:. ......-.  .h-    .........       .....-... +.....  .. ... . .-:-.         
+..                .  o/:/ss::.:-..  ..s+.         .....      .-..    o  . ..   ..  ..    .:        
+..                 ..:yh+//oo+-....     :s:           .... ...  .  .  s. ..  .    .   ..           
+.                  -o/:h..-.:-           .y/       ..-......   ..  .. o.. ..       ..   .          
+.                  .y. .oo/:-:.      ...   .+s-..... .  ...  ...    .  /..  .         ..           
+-                  -oo. .h---.-.   ..        :sy+.   -..  ..        . ..+.               ..        
+-                 .:.-/:..s+. -......         :./ho/-.:.. ...       ..- .:.                        
+-                .--.     .:-.....            :   :y/-/...-./    ... -  ....                       
+.                -..    .......               ..   .d++ ..-::.-..-...-..                           
+.                . .     .                     :  ...h/              .                             
+.                ...     .                     ::..  -d               .                            
+.                .                            -o.    m.               .                            
+.                             .:    yo.                                                            
+.                              :    +s..                                                           
+</pre>
 
-      function padZero(s, len, c) {
-        s = s.toString();
-        c = c || "0";
-        while (s.length < len) s = c + s;
-        return s;
-      }
-    </script>
-  </body>
+    </body>
 </html>
