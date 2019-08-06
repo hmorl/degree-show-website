@@ -1,11 +1,12 @@
 baseURL = "/"
 languageCode = "en-GB"
-title = "entangled.show"
-theme = "entangled-theme"
+title = "So, How Is That Working For You?"
+theme = "sohow-theme"
 
 [params]
-    description = "Goldsmiths Computational Arts Degree Show 2019"
+    description = "Goldsmiths Computational Arts 2019"
     author = ""
+    themes = ""
 
 [params.social]
     [[params.social.list]]

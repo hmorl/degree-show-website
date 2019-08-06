@@ -1,5 +1,6 @@
 {{ define "main" }}
 <main role="main">
+
     <p>Hello world!</p>
     <p>List of artist pages:</p>
     {{- $paginator := .Paginate (where .Pages "Type" "artists") -}}
