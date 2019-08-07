@@ -29,6 +29,8 @@ div {
     margin: 0;
     padding: 0;
     line-height: 1.4em;
+    color: rgba(189, 228, 250);
+
     background-color: rgba(10, 0, 30, 1); 
 }
 
@@ -93,6 +95,8 @@ a:hover {
         position: static;
         display: block;
         margin-left: 2ch;
+        color: rgba(189, 228, 250);
+
     }
 
     .floating.header {
