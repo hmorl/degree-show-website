@@ -3,7 +3,7 @@ var bgDiv; //div used as a canvas
 var bgSource //element which contains the background;
 //3x 'That', so greater chance of picking 'That'
 var themes = ["That", "That", "That", "Intelligence","Phenomenon", "Narration", "Network", "Matter", "Embodiment", "Surveillance"];
-var lineHeight;
+var lineHeight, lineHeightEM;
 var fontSize;
 var screenW, screenH;
 var scrollTop;
@@ -54,12 +54,19 @@ function getDims() {
     screenH = document.documentElement.clientHeight;
     //documentElement doesn't work in Safari so checking document.body as well
     scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+    //line height in pixels
     lineHeight = parseFloat(getComputedStyle(document.body).lineHeight);
+
     //number of character rows currently on screen
     charRows = Math.floor(screenH / lineHeight);
     //number of character rows scrolled
     linesScrolled = Math.floor(scrollTop / lineHeight);
     fontSize = parseFloat(getComputedStyle(document.body).fontSize);
+
+    //line height in EM units
+    lineHeightEM = lineHeight / fontSize;
+
     //no idea why /1.25 but it seems to work with any size (letter spacing?)
     charColumns = Math.floor(screenW / (fontSize/1.25));
 }
@@ -86,10 +93,10 @@ function positions(){
             // header/footer for future designs
             if(classes.contains("footer")){
                 divs[i].style.left = 2 + "ch";
-                divs[i].style.top = (linesScrolled*1.4) + (1.4 * (charRows - 5)) + "em";
+                divs[i].style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 5)) + "em";
             } else if (classes.contains("header")){
                 divs[i].style.left = 2 + "ch";
-                divs[i].style.top = (1.4 + linesScrolled*1.4)+ "em";
+                divs[i].style.top = (lineHeightEM + linesScrolled*lineHeightEM)+ "em";
 
             // central sets x and y relative to the center of the screen
             } else if (classes.contains("central")){
@@ -97,13 +104,13 @@ function positions(){
                 let x = Number(metrics.split(",")[0]);
                 let y = Number(metrics.split(",")[1]);
                 divs[i].style.left = Math.floor(charColumns/2)+x + "ch";
-                divs[i].style.top = (1.4*(Math.floor(charRows/2)+y) + linesScrolled*1.4)+ "em";
+                divs[i].style.top = (lineHeightEM*(Math.floor(charRows/2)+y) + linesScrolled*lineHeightEM)+ "em";
             } else {
                 let metrics = classes[1];
                 let x = Number(metrics.split(",")[0]);
                 let y = Number(metrics.split(",")[1]);
                 divs[i].style.left = x + "ch";
-                divs[i].style.top = (y*1.4 + linesScrolled*1.4)+ "em";
+                divs[i].style.top = (y*lineHeightEM + linesScrolled*lineHeightEM)+ "em";
             }
         }
     } else {   //else, set divs to static blocks (let css handle it)
@@ -111,7 +118,7 @@ function positions(){
             divs[i].style.position = "static";
             divs[i].style.display = "block";
             divs[i].style.marginLeft = "2ch";
-            divs[i].style.marginTop = "1.4em";
+            divs[i].style.marginTop = lineHeightEM +"em";
         }
     }
 }
