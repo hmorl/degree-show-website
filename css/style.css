@@ -103,7 +103,7 @@ a:hover {
 /* this is pretty much a no-javascript fallback */
 /* ensures the information is still on the page somehow */
 @media (max-width: 38em) {
-    div{
+    .floating{
         position: static;
         display: block;
         margin-left: 2ch;
