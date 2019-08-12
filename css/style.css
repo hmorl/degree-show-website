@@ -24,7 +24,11 @@ body {
     
 }
 
-div {
+#maplinks {
+    display: inline;
+}
+
+.floating {
     display: block;
     position:static;
     white-space: pre;
@@ -86,6 +90,12 @@ a {
 }
 
 a:hover {
+    opacity: 1;
+    font-weight: 100;
+}
+
+/* this is a fix */
+#maplinks:hover a {
     opacity: 1;
     font-weight: 100;
 }
