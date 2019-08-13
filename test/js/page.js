@@ -92,11 +92,11 @@ function positions(){
 
             // header/footer for future designs
             if(classes.contains("footer")){
-                divs[i].style.left = 2 + "ch";
-                divs[i].style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 5)) + "em";
+                divs[i].style.left = 0;
+                divs[i].style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 3)) + "em";
             } else if (classes.contains("header")){
-                divs[i].style.left = 2 + "ch";
-                divs[i].style.top = (lineHeightEM + linesScrolled*lineHeightEM)+ "em";
+                divs[i].style.left = 0;
+                divs[i].style.top = (linesScrolled*lineHeightEM)+ "em";
 
             // central sets x and y relative to the center of the screen
             } else if (classes.contains("central")){

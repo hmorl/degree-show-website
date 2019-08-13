@@ -43,7 +43,7 @@ div {
 .floating.footer {
     margin: 0;
     padding: 0;
-    left: 2ch;
+    left: 0ch;
     top: calc(1.4em * 25);
     z-index: 997;
 }
@@ -51,8 +51,8 @@ div {
 .floating.header {
     margin: 0;
     padding: 0;
-    left: 2ch;
-    top: 1.4em;
+    left: 0ch;
+    top: 0em;
     z-index: 998;
 }
 
