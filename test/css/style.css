@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 20px;
+    font-size: 16px;
     font-family: ThreadsMonoGX;
 
 }
@@ -48,6 +48,15 @@ div {
     z-index: 997;
 }
 
+.floating.header div,
+.floating.footer div {
+    display: inline-block;
+}
+
+.floating.footer div#footer-text {
+    color: #76c9e1;
+}
+
 .floating.header {
     margin: 0;
     padding: 0;
@@ -78,6 +87,7 @@ div {
     font-weight: 100;
     position: absolute;
     color: #fc0000;
+    text-transform: uppercase;
 }
 
 a {

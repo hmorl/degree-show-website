@@ -150,9 +150,9 @@ function borders() {
         }
 
         // for future stuff
-        // if(maxLen < charColumns-8 && (classes.contains("header")||classes.contains("footer") )) {
-        //     maxLen = charColumns - 8;
-        // }
+        if(maxLen < charColumns-8 && (classes.contains("header")||classes.contains("footer") )) {
+             maxLen = charColumns - 5;
+        }
 
         //add pipes and padding either side of every line
         for(let j = 0; j < lines.length; j++) {
