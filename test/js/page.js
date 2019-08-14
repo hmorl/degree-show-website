@@ -39,7 +39,7 @@ window.onload = function(){
     borders();
 
     //le fix
-    document.getElementById('thread').innerHTML="That";
+    document.getElementById('thread').innerHTML="    That";
 
     //for future animations
     // setInterval(changeFrame, 500);
@@ -186,6 +186,8 @@ function borders() {
 function changeTheme() {
     let threadEl = document.getElementById('thread');
     let theme = themes[Math.floor(Math.random()*themes.length)];
+    // Calculate spacing to center align text
+    theme = " ".repeat(Math.floor((12 - theme.length)/2)) + theme;
     threadEl.innerHTML = theme;
 }
 
