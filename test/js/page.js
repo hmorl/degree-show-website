@@ -89,14 +89,15 @@ function positions(){
         for(let i = 0; i < divs.length; i++) {
             var classes = divs[i].classList;
             divs[i].style.position = "absolute";
+            bgDiv.style.display = "block";
 
             // header/footer for future designs
             if(classes.contains("footer")){
-                divs[i].style.left = 0;
-                divs[i].style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 3)) + "em";
+                divs[i].style.left = 1+"ch";
+                divs[i].style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 5)) + "em";
             } else if (classes.contains("header")){
-                divs[i].style.left = 0;
-                divs[i].style.top = (linesScrolled*lineHeightEM)+ "em";
+                divs[i].style.left = 1+"ch";
+                divs[i].style.top = (linesScrolled*lineHeightEM)+1+ "em";
 
             // central sets x and y relative to the center of the screen
             } else if (classes.contains("central")){
@@ -119,6 +120,8 @@ function positions(){
             divs[i].style.display = "block";
             divs[i].style.marginLeft = "2ch";
             divs[i].style.marginTop = lineHeightEM +"em";
+
+            bgDiv.style.display = "none";
         }
     }
 }
@@ -149,7 +152,7 @@ function borders() {
             if(textChars[j] > maxLen) maxLen = textChars[j];   //find maximum width
         }
 
-        // for future stuff
+        // // for future stuff
         if(maxLen < charColumns-8 && (classes.contains("header")||classes.contains("footer") )) {
              maxLen = charColumns - 5;
         }
