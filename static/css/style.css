@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'ThreadsMono';
+    src: url(../font/ThreadsMono.ttf);
+    font-weight: 1 999;
+}
+
+@font-face {
+    font-family: 'ThreadsMonoPlain';
+    src: url(../font/ThreadsMonoPlain.ttf);
+    font-weight: 1 999;
+}
+
+@keyframes myAnim {
+    0% {font-variation-settings: "wght" 20; }
+    50% {font-variation-settings: "wght" 180;}
+    100% {font-variation-settings: "wght" 20;}
+} 
+
+html {
+    font-size: 20px;
+    font-family: ThreadsMono;
+}
+
+
+pre {
+    display: none;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 1.2em;
+    padding: 0;
+}
+
+ul#about-thread-grid {
+    list-style: none;
+    margin: 0 0 8.4em 0;
+    padding: 0;
+}
+
+#about-thread-grid li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    max-width: 29ch;
+    vertical-align: top;
+}
+
+#about-thread-grid li span{
+    display: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
+    font-variation-settings: "wght" 40;
+    background-color: rgba(10, 0, 30, 1);
+    color: rgba(189,228,250,1);
+
+    -moz-transition: 5s ease-in-out;
+    -ms-transition: 5s ease-in-out;
+    -o-transition: 5s ease-in-out;
+    -webkit-transition: 5s ease-in-out;
+    transition: 5s ease-in-out;
+}
+
+.border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: inherit;
+    -moz-font-feature-settings: "case" on;
+    -ms-font-feature-settings: "case" on;
+    -o-font-feature-settings: "case" on;
+    -webkit-font-feature-settings: "case" on;
+    font-feature-settings: "case" on;
+}
+
+.border#border-right {
+    padding-right: 2ch;
+}
+
+.ascii.header, .ascii.footer {
+    white-space: pre;
+    margin: 0;
+    padding: 0;
+    left: 0ch;
+    background-color: inherit; 
+}
+
+.ascii.footer {
+    position:relative;
+    top: 9.6em;
+    left: 2ch;
+    width:100%;
+    white-space: normal;
+}
+.ascii.footer div {
+    display: inline-block;
+}
+
+div#header-text {
+    display: inline;
+    position: relative;
+    left: 2ch;
+    top: calc(1.2em * 1);
+    white-space: pre;
+    margin:0;
+    padding:0;
+    z-index: 999;
+}
+
+#working-for-you {
+    display: block;
+    white-space: normal;
+}
+
+.ascii.header div#header-text:hover a {
+    opacity: 1;
+    font-variation-settings: "wght" 100;
+
+    -moz-font-feature-settings: 'ss01' on;
+    -ms-font-feature-settings: 'ss01' on;
+    -o-font-feature-settings: 'ss01' on;
+    -webkit-font-feature-settings: 'ss01' on;
+    font-feature-settings: ‘ss01’;
+}
+
+/* .ascii.footer div#footer-text {
+    color: #76c9e1;
+} */
+
+/* bg = main canvas */
+#bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: pre;
+    z-index: -9999;
+    margin: 0;
+    padding: 0;
+    font-weight: inherit;
+    font-family: ThreadsMono;
+    color: inherit;
+    background-color: transparent;
+}
+
+span#thread {
+    position: absolute;
+
+    -moz-font-feature-settings: "ss01" on;
+    -ms-font-feature-settings: "ss01" on;
+    -o-font-feature-settings: "ss01" on;
+    -webkit-font-feature-settings: "ss01" on;
+    font-feature-settings: "ss01" on;
+
+
+    animation: myAnim infinite; 
+    animation-duration: 4s; 
+    animation-timing-function: ease; 
+    transition: ease-out;
+}
+
+div#single-content {
+    position: relative;
+    display: block;
+    margin: 0 3ch 0 0;
+    padding:0;
+    left: 2ch;
+    top: calc(1.2em * 2);
+    max-width: 60ch;
+    font-family: ThreadsMonoPlain;
+}
+
+div#sidebar {
+    position: absolute;
+    margin:0;
+    padding:0;
+    top: calc(1.2em * 5);
+    left: 3ch;
+    width: 22ch;
+    margin-right: 2ch;
+}
+
+div#artist-details {
+    position: absolute;
+    margin:0;
+    padding:0;
+    top: calc(1.2em * 5);
+    left: 25ch;
+    width: 16ch;
+    word-wrap: break-word;
+    margin-right: 2ch;
+}
+
+div#artist-content {
+    position: absolute;
+    display: inline;
+    margin:0;
+    padding:0;
+    top: calc(1.2em * 5);
+    left: 42ch;
+    margin-right: 2ch;
+    font-family: ThreadsMonoPlain;
+}
+
+div#header-menu {
+    white-space: normal;
+    background-color: inherit;
+    z-index: 999;
+    position: relative;
+    top: calc(1.2em * 1);
+    left: 2ch;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#single-content a {
+    opacity: 0.6;
+}
+
+a.active {
+    font-variation-settings: "wght" 100;
+
+    -moz-font-feature-settings: "ss01" on;
+    -ms-font-feature-settings: "ss01" on;
+    -o-font-feature-settings: "ss01" on;
+    -webkit-font-feature-settings: "ss01" on;
+    font-feature-settings: "ss01" on;
+
+    animation: myAnim infinite; 
+    animation-duration: 7s; 
+    animation-timing-function: ease; 
+    transition: ease-out;    
+}
+
+a:hover {
+    /* opacity: 1; */
+    font-variation-settings: "wght" 100;
+
+    -moz-font-feature-settings: "ss01" on;
+    -ms-font-feature-settings: "ss01" on;
+    -o-font-feature-settings: "ss01" on;
+    -webkit-font-feature-settings: "ss01" on;
+    font-feature-settings: "ss01" on;
+
+    animation: myAnim infinite; 
+    animation-duration: 4s; 
+    animation-timing-function: ease; 
+    transition: ease-out;
+}
+
+span.intelligence {
+    color: #ff6398;
+}
+
+span.phenomenon {
+    color: #00cc85;
+}
+
+span.narration {
+    color: #ff6c17;
+}
+
+span.network {
+    color: #b700f2;
+}
+
+span.matter {
+    color: #ffdb00;
+}
+
+span.embodiment {
+    color: #00a4ff;
+}
+
+span.surveillance {
+    color: #fc1200;
+}
+
+/* this is pretty much a no-javascript fallback */
+/* ensures the information is still on the page somehow */
+@media (max-width: 30em) {
+
+}

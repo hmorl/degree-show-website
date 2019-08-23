@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+work_title: Work Title
+links: []
+threads: []
 draft: true
 ---
 

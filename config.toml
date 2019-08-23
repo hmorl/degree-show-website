@@ -1,31 +1,62 @@
 baseURL = "/"
 languageCode = "en-GB"
 title = "So, How Is That Working For You?"
-theme = "sohow-theme"
 
 [params]
     description = "Goldsmiths Computational Arts 2019"
     author = ""
     themes = ""
 
-[params.social]
-    [[params.social.list]]
-    class = "fab"
-    icon = "fa-twitter"
-    url = "#"
-
-    [[params.social.list]]
-    class = "fab"
-    icon = "fa-instagram"
-    url = "#"
-
-    [[params.social.list]]
-    class = "fab"
-    icon = "fa-facebook"
-    url = "#"
-
-    [[params.social.list]]
-    class = "fab"
-    icon = "fa-github"
-    url = "#"
+[taxonomies]
+    category = "threads"
     
+[menu]
+    # button to change colours?
+    # [[menu.main]]
+    # name = "invert"
+    # url = "#"
+    # weight = 0
+
+    [[menu.main]]
+    name = "about"
+    url = "/about/"
+    weight = 1
+
+    # [[menu.main]]
+    # name = "artists"
+    # url = "/artists/"
+    # weight = 2
+
+    [[menu.main]]
+    name = "map"
+    url = "/map/"
+    weight = 3
+
+    [[menu.main]]
+    name = "info"
+    url = "/info/"
+    weight = 4
+
+    [[menu.social]]
+    name = "RSVP"
+    url = "https://www.eventbrite.com/e/goldsmiths-computational-arts-mamfa-degree-show-2019-tickets-68690778969"
+    weight = 1
+
+    [[menu.social]]
+    name = "FACEBOOK"
+    url = "https://www.facebook.com/events/468722533703227/"
+    weight = 2
+
+    [[menu.social]]
+    name = "TWITTER"
+    url = "https://twitter.com/goldcomparts/"
+    weight = 3
+
+    [[menu.social]]
+    name = "INSTAGRAM"
+    url = "https://www.instagram.com/goldsmithscomparts"
+    weight = 4
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true

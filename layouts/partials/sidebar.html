@@ -1,0 +1,9 @@
+<div class = "ascii border" id ="sidebar">
+<a href="/artists/">ARTISTS</a><br>
+<br>
+{{ $currentPage := . }}
+{{- $artistlist := where .Site.RegularPages "Type" "artists" -}}
+{{ range $elem_index, $elem_val := $artistlist }}
+    <a href="{{- .URL -}}">{{ if hasPrefix $currentPage.URL .URL }}[{{ .Title }}]{{ else }}{{ .Title }}{{ end }}</a><br>
+{{- end -}}
+</div>

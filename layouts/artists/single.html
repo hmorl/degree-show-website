@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main role="main">
+{{ partial "sidebar.html" . }}
+
+<div id="artist-details">
+    <p class ="section">{{- upper .Title -}}</p>
+    <p class ="section">{{ range .Params.links }}
+        <a href="{{- .url -}}" target="_blank">{{- .name -}}</a><br>
+    {{ end }}</p>
+    <p class ="section">{{ range .Params.threads }}
+        <a href="/map?thread={{ lower . }}">{{ upper . }}</a><br>
+    {{ end }}</p>
+    <p class ="section"><a href="/map?name={{ .Title }}">GO TO MAP >></a></p>
+</div>
+
+<div id="artist-content">
+"{{- .Params.work_title -}}"
+<p>{{- .Content -}}</p>
+<br>
+<br>
+<br>
+<br>
+</div>
+</main>
+{{ end }}
