@@ -1,16 +1,30 @@
 var frameNum = 0; //used for changing animation
 var bgDiv; //div used as a canvas
 var bgSource //element which contains the background;
+var borderLeft, borderRight;
 //3x 'That', so greater chance of picking 'That'
-var themes = ["That", "That", "That", "Intelligence","Phenomenon", "Narration", "Network", "Matter", "Embodiment", "Surveillance"];
+var themes = ["Intelligence","Phenomenon", "Narration", "Network", "Matter", "Embodiment", "Surveillance"];
+var colours = ["#ff6398",  "#00cc85", "#ff6c17", "#b700f2", "#ffdb00", "#00a4ff", "#fc1200"];
 var lineHeight, lineHeightEM;
 var fontSize;
 var screenW, screenH;
 var scrollTop;
+var scrollLeft;
+
 var linesScrolled;
+var colsScrolled;
+
 var charColumns, charRows;
 var divs;
 var originalDivs = [];
+var showASCIIbackground;
+var isDesktop = false;
+
+var menuDiv;
+var footerDiv;
+var headerDiv;
+
+var singleDiv;
 
 //scroll to top on load
 window.onbeforeunload = function () {
@@ -18,43 +32,72 @@ window.onbeforeunload = function () {
 }
 
 window.onload = function(){
-    //get background div to put the ascii art in
-    bgDiv = document.getElementById('bg'); 
-    bgSource = document.getElementById('neurons');
-    //for animation (future)
-    //bgSource = document.getElementById('bg-1'); 
-
-    document.getElementById('thread').innerHTML="";
-
-    //get all divs for grid formatting
-    divs = document.getElementsByClassName('floating');
-
-    //prevents text from filling recursively
-    for(var i = 0; i < divs.length; i++) {
-        originalDivs.push(divs[i].innerHTML);
+    if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isDesktop = true;
     }
 
-    getDims();
-    positions();
-    borders();
+    if(isDesktop){
+        //get background div to put the ascii art in
+        bgDiv = document.getElementById('bg');
+        if(bgDiv != null){
+            showASCIIbackground = true;
+        }
 
-    //le fix
-    document.getElementById('thread').innerHTML="That";
+        //load first frame of animation
+        bgSource = document.getElementById('face-1'); 
 
-    //for future animations
-    // setInterval(changeFrame, 500);
+        //page border divs
+        borderLeft = document.getElementById('border-left');
+        borderRight = document.getElementById('border-right');
+
+        //get all divs for grid formatting
+        divs = document.getElementsByClassName('ascii');
+        menuDiv = document.getElementById('header-menu');
+        footerDiv = document.getElementById('footer');
+        headerDiv = document.getElementById('header-text');
+        // singleDiv = document.getElementById('single-content');
+
+        document.getElementsByClassName('ascii header')[0].style.display="block";
+
+        footerDiv.style.position = "absolute";
+        headerDiv.style.position = "absolute";
+        // singleDiv.style.position = "absolute";
+
+        footerDiv.style.left="0ch";
+        footerDiv.style.whiteSpace="pre";
+        menuDiv.style.position = "absolute";
+
+        originalDivs.push(document.getElementById('header').innerHTML);
+        originalDivs.push(footerDiv.innerHTML);
+
+        //get page dimensions and character info
+        getDims();
+        pageBorder();
+        positions();
+        divBorders();
+
+        //animation timers
+        if(showASCIIbackground) setInterval(changeFrame, 180);
+
+        //set bg div to the ascii source div
+        if(showASCIIbackground) bgDiv.innerHTML = bgSource.innerHTML;
+
+        //set visible after loading
+        document.body.style.display = "block";
+    }
+
+    changeTheme();
     setInterval(changeTheme, 1200);
-
-    //set bg div to the ascii source div
-    bgDiv.innerHTML = bgSource.innerHTML;
 }
 
 function getDims() {
     screenW = document.documentElement.clientWidth;
     screenH = document.documentElement.clientHeight;
+
     //documentElement doesn't work in Safari so checking document.body as well
     scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
 
+    scrollLeft = document.body.scrollLeft || document.documentElement.scrollLeft;
     //line height in pixels
     lineHeight = parseFloat(getComputedStyle(document.body).lineHeight);
 
@@ -64,6 +107,8 @@ function getDims() {
     linesScrolled = Math.floor(scrollTop / lineHeight);
     fontSize = parseFloat(getComputedStyle(document.body).fontSize);
 
+    colsScrolled = Math.floor(scrollLeft/(fontSize/1.25));
+
     //line height in EM units
     lineHeightEM = lineHeight / fontSize;
 
@@ -71,59 +116,55 @@ function getDims() {
     charColumns = Math.floor(screenW / (fontSize/1.25));
 }
 window.onresize = function(){
-    getDims();
-    positions();
-    borders();
-    //stops glitching
-    document.getElementById('thread').innerHTML="That";
-}
-
-window.onscroll = function() {
-    getDims();
-    positions();
-}
-
-function positions(){
-    //a lovely js media query. if on desktop:
-    if(screenW > fontSize * 35) {
-        for(let i = 0; i < divs.length; i++) {
-            var classes = divs[i].classList;
-            divs[i].style.position = "absolute";
-
-            // header/footer for future designs
-            if(classes.contains("footer")){
-                divs[i].style.left = 2 + "ch";
-                divs[i].style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 5)) + "em";
-            } else if (classes.contains("header")){
-                divs[i].style.left = 2 + "ch";
-                divs[i].style.top = (lineHeightEM + linesScrolled*lineHeightEM)+ "em";
-
-            // central sets x and y relative to the center of the screen
-            } else if (classes.contains("central")){
-                let metrics = classes[1];
-                let x = Number(metrics.split(",")[0]);
-                let y = Number(metrics.split(",")[1]);
-                divs[i].style.left = Math.floor(charColumns/2)+x + "ch";
-                divs[i].style.top = (lineHeightEM*(Math.floor(charRows/2)+y) + linesScrolled*lineHeightEM)+ "em";
-            } else {
-                let metrics = classes[1];
-                let x = Number(metrics.split(",")[0]);
-                let y = Number(metrics.split(",")[1]);
-                divs[i].style.left = x + "ch";
-                divs[i].style.top = (y*lineHeightEM + linesScrolled*lineHeightEM)+ "em";
-            }
-        }
-    } else {   //else, set divs to static blocks (let css handle it)
-        for(let i = 0; i < divs.length; i++) {
-            divs[i].style.position = "static";
-            divs[i].style.display = "block";
-            divs[i].style.marginLeft = "2ch";
-            divs[i].style.marginTop = lineHeightEM +"em";
-        }
+    if(isDesktop){
+        getDims();
+        positions();
+        divBorders();
+        pageBorder();
+        //stops glitching out when resizing
+        document.getElementById('thread').innerHTML="    That";
     }
 }
 
-function borders() {
+window.onscroll = function() {
+    if(isDesktop){
+        getDims();
+        positions();
+        divBorders();
+        pageBorder();
+    }
+}
+
+function pageBorder() {
+    let border = "";
+    for(let i = 0; i < linesScrolled+charRows; i++){
+        if(i%2==0) border += "/<br>";
+        else border += "\\<br>";
+    }
+    borderLeft.innerHTML = border;
+    borderRight.innerHTML = border;
+}
+
+function positions(){
+    //move right hand border if page scrolled right
+    borderRight.style.left = colsScrolled + (charColumns-1) + "ch";
+
+    //float footer, quantising to the line height
+    footerDiv.style.left = 0+"ch;"
+    footerDiv.style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 5)) + "em";
+
+    //move menu down if screen width small
+    if(charColumns<40){
+        menuDiv.style.top = (4*lineHeightEM)+"em";
+        menuDiv.style.left = 2+"ch";
+    }else{
+        menuDiv.style.left = charColumns - 20 + "ch";
+        menuDiv.style.top = (2*lineHeightEM)+ "em";
+
+    }
+}
+
+function divBorders() {
     //now the fun part
     for(let i = 0; i < divs.length; i++) {
         var text = originalDivs[i].trim();
@@ -137,9 +178,6 @@ function borders() {
         //and for each line, store how many characters of html
         //to ignore (e.g. don't want <a> counting towards line length)
 
-        //This has to be performed on innerHTML
-        //rather than innerText, to allow for things like links to make it through
-
         for(let j = 0; j < lines.length; j++){
             lines[j] = lines[j].trim();
             var htmlChars = lines[j].match(/\<(.*?)\>/g);
@@ -150,31 +188,41 @@ function borders() {
         }
 
         // for future stuff
-        // if(maxLen < charColumns-8 && (classes.contains("header")||classes.contains("footer") )) {
-        //     maxLen = charColumns - 8;
-        // }
+        if(classes.contains("header")||classes.contains("footer")) {
+             maxLen = charColumns - 4;
+        }
 
         //add pipes and padding either side of every line
         for(let j = 0; j < lines.length; j++) {
-            //if j odd, pipe forward slash, otherwise backslash
-            (j%2==1) ? pipe = "/" : pipe = "\\";
+
             var pad = 0;
             //calculate amount of padding between text and the end pipe
             if(textChars[j] < maxLen) pad = maxLen - textChars[j];
-
             if(classes.contains("footer")){
-                lines[j] = pipe + " " + " ".repeat(pad) + lines[j] + " " + pipe;
-            }else{
-                lines[j] = pipe + " " + lines[j] + " ".repeat(pad) + " " + pipe;
+                lines[j] = "  " + " ".repeat(pad) + lines[j] + "  ";
+            }else if (classes.contains("header")){
+                lines[j] = "  " + lines[j] + " ".repeat(pad) + "  ";
             }
         }
 
-        //add top border 
-        lines.unshift("/" + "—".repeat(maxLen+2) + "/");
-        if((lines.length%2)==0) pipe = "/"; else pipe = "\\";
 
-        //add bottom border (and alternate pipe depending whether odd or even number of lines!)
-        lines.push(pipe + "—".repeat(maxLen+2) + pipe);
+        if(classes.contains("header")){
+            lines.push(" " + " ".repeat(colsScrolled+maxLen+2) + " ");
+
+            if(charColumns < 40){
+                lines.push(" " + " ".repeat(colsScrolled+maxLen+2) + " ");
+                lines.push(" " + " ".repeat(colsScrolled+maxLen+2) + " ");
+            }
+
+
+        }
+
+        if(classes.contains("header")||classes.contains("footer")){
+        //add top and bottom border 
+            lines.unshift(" " + "—".repeat(colsScrolled+maxLen+2) + " ");
+            lines.push(" " + "—".repeat(colsScrolled+maxLen+2) + " ");
+        }
+
         divs[i].innerHTML = lines.join("\n");
     }
 }
@@ -182,15 +230,19 @@ function borders() {
 //changing the 'thread' text, picks from array of words (at top)
 function changeTheme() {
     let threadEl = document.getElementById('thread');
-    let theme = themes[Math.floor(Math.random()*themes.length)];
+    let themeIdx = Math.floor(Math.random()*themes.length);
+    let theme = themes[themeIdx];
+    // Calculate spacing to center align text
+    theme = " ".repeat(Math.floor((12 - theme.length)/2)) + theme;
+    threadEl.style.color = colours[themeIdx]; 
     threadEl.innerHTML = theme;
 }
 
 //for animating the background
 function changeFrame() {
-    bgSource = document.getElementById('neurons');
-    // bgSource = document.getElementById('bg-' + (frameNum+1));
+    // bgSource = document.getElementById('neurons');
+    bgSource = document.getElementById('face-' + (frameNum+1));
     // bgSource = document.getElementById('pattern');
     bgDiv.innerHTML = bgSource.innerHTML;
-    frameNum = (frameNum+1) % 12;
+    frameNum = (frameNum+1) % 73;
 }
