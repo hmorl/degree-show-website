@@ -22,7 +22,8 @@ var isDesktop = false;
 
 var menuDiv;
 var footerDiv;
-var headerDiv;
+var headerTextDiv;
+
 
 var singleDiv;
 
@@ -54,14 +55,15 @@ window.onload = function(){
         divs = document.getElementsByClassName('ascii');
         menuDiv = document.getElementById('header-menu');
         footerDiv = document.getElementById('footer');
-        headerDiv = document.getElementById('header-text');
-        // singleDiv = document.getElementById('single-content');
+        headerTextDiv = document.getElementById('header-text');
+        singleDiv = document.getElementById('single-content');
+        if(singleDiv != null){
+            singleDiv.style.marginTop="-1.2em";
+        }
 
         document.getElementsByClassName('ascii header')[0].style.display="block";
 
-        footerDiv.style.position = "absolute";
-        headerDiv.style.position = "absolute";
-        // singleDiv.style.position = "absolute";
+        headerTextDiv.style.position = "absolute";
 
         footerDiv.style.left="0ch";
         footerDiv.style.whiteSpace="pre";
@@ -72,18 +74,21 @@ window.onload = function(){
 
         //get page dimensions and character info
         getDims();
-        pageBorder();
         positions();
         divBorders();
+        pageBorder();
 
         //animation timers
-        if(showASCIIbackground) setInterval(changeFrame, 180);
+        if(showASCIIbackground) {
+            setInterval(changeFrame, 180);
+            bgDiv.innerHTML = bgSource.innerHTML;
+        }
 
-        //set bg div to the ascii source div
-        if(showASCIIbackground) bgDiv.innerHTML = bgSource.innerHTML;
-
+        document.getElementById('mob-break').style.display = "none";
         //set visible after loading
         document.body.style.display = "block";
+    }else {
+        document.body.style.margin = -2 + "ch";
     }
 
     changeTheme();
@@ -120,9 +125,11 @@ window.onresize = function(){
         getDims();
         positions();
         divBorders();
-        pageBorder();
-        //stops glitching out when resizing
-        document.getElementById('thread').innerHTML="    That";
+        // if(showASCIIbackground){
+            pageBorder();
+        // } 
+
+
     }
 }
 
@@ -131,13 +138,25 @@ window.onscroll = function() {
         getDims();
         positions();
         divBorders();
-        pageBorder();
+        // if(showASCIIbackground){
+            pageBorder();
+        // }
+
+
     }
 }
 
 function pageBorder() {
     let border = "";
-    for(let i = 0; i < linesScrolled+charRows; i++){
+
+    let borderHeight;
+
+    if(showASCIIbackground){
+        borderHeight = linesScrolled+charRows;
+    }else {
+        borderHeight = (footerDiv.offsetTop/lineHeight) + 4;
+    }
+    for(let i = 0; i < borderHeight; i++){
         if(i%2==0) border += "/<br>";
         else border += "\\<br>";
     }
@@ -150,17 +169,16 @@ function positions(){
     borderRight.style.left = colsScrolled + (charColumns-1) + "ch";
 
     //float footer, quantising to the line height
-    footerDiv.style.left = 0+"ch;"
-    footerDiv.style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 5)) + "em";
-
+    if(showASCIIbackground){
+        footerDiv.style.top = (linesScrolled*lineHeightEM) + (lineHeightEM * (charRows - 6)) + "em";
+    }
     //move menu down if screen width small
-    if(charColumns<40){
+    if(charColumns<49){
         menuDiv.style.top = (4*lineHeightEM)+"em";
         menuDiv.style.left = 2+"ch";
     }else{
-        menuDiv.style.left = charColumns - 20 + "ch";
+        menuDiv.style.left = charColumns - 30 + "ch";
         menuDiv.style.top = (2*lineHeightEM)+ "em";
-
     }
 }
 
@@ -208,13 +226,10 @@ function divBorders() {
 
         if(classes.contains("header")){
             lines.push(" " + " ".repeat(colsScrolled+maxLen+2) + " ");
-
-            if(charColumns < 40){
+            if(charColumns < 49){
                 lines.push(" " + " ".repeat(colsScrolled+maxLen+2) + " ");
                 lines.push(" " + " ".repeat(colsScrolled+maxLen+2) + " ");
             }
-
-
         }
 
         if(classes.contains("header")||classes.contains("footer")){
@@ -232,8 +247,6 @@ function changeTheme() {
     let threadEl = document.getElementById('thread');
     let themeIdx = Math.floor(Math.random()*themes.length);
     let theme = themes[themeIdx];
-    // Calculate spacing to center align text
-    theme = " ".repeat(Math.floor((12 - theme.length)/2)) + theme;
     threadEl.style.color = colours[themeIdx]; 
     threadEl.innerHTML = theme;
 }

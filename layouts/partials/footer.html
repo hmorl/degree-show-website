@@ -1,10 +1,4 @@
 <div class = "ascii footer" id = "footer">
 {{ .Site.Params.description }}
 <div id="footer-location"><a href="https://goo.gl/maps/NnGA3tGva1bGYWHH8" target="_blank">St. James Hatcham Church, London SE14 6AD</a></div>
-<div id="footer-text">
-{{- $social := .Site.Menus.social -}}
-{{- range $elem_index, $elem_val := $social -}}
-<a href="{{- .URL -}}" target="_blank">{{ upper .Name }}</a>{{ if ne $elem_index (sub (len $social) 1) }} | {{ end }}
-{{- end -}}
-</div>
 </div>

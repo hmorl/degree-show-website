@@ -5,27 +5,17 @@ title = "So, How Is That Working For You?"
 [params]
     description = "Goldsmiths Computational Arts 2019"
     author = ""
-    themes = ""
-
-[taxonomies]
-    category = "threads"
     
 [menu]
-    # button to change colours?
-    # [[menu.main]]
-    # name = "invert"
-    # url = "#"
-    # weight = 0
-
     [[menu.main]]
     name = "about"
     url = "/about/"
     weight = 1
 
-    # [[menu.main]]
-    # name = "artists"
-    # url = "/artists/"
-    # weight = 2
+    [[menu.main]]
+    name = "artists"
+    url = "/artists/"
+    weight = 2
 
     [[menu.main]]
     name = "map"
@@ -38,24 +28,19 @@ title = "So, How Is That Working For You?"
     weight = 4
 
     [[menu.social]]
-    name = "RSVP"
-    url = "https://www.eventbrite.com/e/goldsmiths-computational-arts-mamfa-degree-show-2019-tickets-68690778969"
+    name = "\uF082"
+    url = "https://www.facebook.com/events/468722533703227/"
     weight = 1
 
     [[menu.social]]
-    name = "FACEBOOK"
-    url = "https://www.facebook.com/events/468722533703227/"
+    name = "\uF081"
+    url = "https://twitter.com/goldcomparts/"
     weight = 2
 
     [[menu.social]]
-    name = "TWITTER"
-    url = "https://twitter.com/goldcomparts/"
-    weight = 3
-
-    [[menu.social]]
-    name = "INSTAGRAM"
+    name = "\uF083"
     url = "https://www.instagram.com/goldsmithscomparts"
-    weight = 4
+    weight = 3
 
 [blackfriday]
   plainIDAnchors = true

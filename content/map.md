@@ -5,4 +5,5 @@ layout: map
 draft: false
 ---
 
-Exhibition map coming soon!
+Exhibition map coming soon!  
+<br/><br/><br/><br/><br/>

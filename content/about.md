@@ -4,7 +4,7 @@ date: 2019-06-28T14:46:55+01:00
 draft: false
 ---
 
-[← go back](/)
+[←](/)
 
 The MA/MFA Computational Arts final exhibition *So, how is that working for you?* aims to interrogate the relational tensions playing out within the newly-formed spaces of artistic and technological collaboration. Reflecting on critical provocations of what it means to create computationally, particularly in the current state of technological augmentations permeating the deeper substrates of our human existence, we ask the open-ended question: *So, how is that working for you?* in order to probe the potentiality of dislodging computation from its status as an instrument of increasingly coercive control and repurposing it within artistic discourses that aim to open up new avenues for alternative technological narratives.
 
@@ -12,7 +12,7 @@ The exhibition is structured around seven thematic clusters arising from this pr
 
 *So, how is that working for you?* is a set of speculative responses to these themes, questions and tensions; providing a placeholder for what *that* may be and leaving open and inconclusive what may be considered as *working*, the exhibition invites the audience to explore potential answers to this question alongside the artists, through engaging with the works and delving into the overlaps, discrepancies and dialogues arising between them.
 
-Threads:
+THREADS:
 
 <ul id = "about-thread-grid">
 <li><span class = 'intelligence'>INTELLIGENCE:</span>

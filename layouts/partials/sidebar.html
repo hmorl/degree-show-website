@@ -1,9 +1,14 @@
-<div class = "ascii border" id ="sidebar">
-<a href="/artists/">ARTISTS</a><br>
-<br>
+<div id ="artist-list"><br/>
+<a href="/artists/">ARTISTS</a>
+<br/><br/>
+<ul id = "artist-names"><li>
 {{ $currentPage := . }}
 {{- $artistlist := where .Site.RegularPages "Type" "artists" -}}
-{{ range $elem_index, $elem_val := $artistlist }}
-    <a href="{{- .URL -}}">{{ if hasPrefix $currentPage.URL .URL }}[{{ .Title }}]{{ else }}{{ .Title }}{{ end }}</a><br>
+{{- range $elem_index, $elem_val := $artistlist -}}
+{{- if ne $elem_index 0 -}}
+{{- if eq (mod $elem_index 20) 0 -}}</li><li>{{- end -}}
 {{- end -}}
+<a href="{{- .URL -}}">{{ .Title }}<br></a>
+{{- end -}}
+</ul>
 </div>

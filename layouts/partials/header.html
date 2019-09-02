@@ -1,13 +1,17 @@
 <div class = "ascii header" id = "header">
-<div id="header-text"><a href="{{- .Site.BaseURL -}}">So, How Is <span id = "thread">That</span><span id="working-for-you">             Working For You?</span></a></div>
+<div id="header-text"><a href="{{- .Site.BaseURL -}}">So, How Is <span id = "thread"></span><span id="working-for-you">Working For You?</span></a><br/></div>
 </div>
 <div id="header-menu">
-{{ $currentPage := . }}
-{{ $menu := .Site.Menus.main}}
-{{- range $elem_index, $elem_val := $menu -}}
-    <a href="{{- .URL -}}"
-    {{- if eq .Name "invert" -}}onClick="invertColours()"{{- end -}}
-    {{- if hasPrefix $currentPage.URL .URL -}}class="active"{{- end -}}>
-    {{- upper .Name -}}</a>{{ if ne $elem_index (sub (len $menu) 1) }} | {{ end }}
-{{- end -}}
+    {{ $currentPage := . }}
+    {{ $menu := .Site.Menus.main}}
+    {{- range $elem_index, $elem_val := $menu -}}
+        <a href="{{- .URL -}}"
+        {{- if eq .Name "invert" -}}onClick="invertColours()"{{- end -}}
+        {{- if hasPrefix $currentPage.URL .URL -}}class="active"{{- end -}}>
+        {{- upper .Name -}}</a>&nbsp;
+    {{- end -}}<br id = "mob-break" />
+    {{- $social := .Site.Menus.social -}}
+    {{- range $elem_index, $elem_val := $social -}}
+    <a href="{{- .URL -}}" target="_blank">{{ .Name }}</a>&nbsp;
+    {{- end -}}  
 </div>
