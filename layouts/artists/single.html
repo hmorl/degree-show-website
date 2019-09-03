@@ -10,6 +10,9 @@
             <p class ="section">{{ range .Params.threads }}
                 <a href="/about/#about-thread-grid"><span class = {{ lower . }}>{{ upper . }}</a></span><br>
             {{ end }}</p>
+            <p class = "section">
+                <a href = "/map/?highlight={{ path.Base .URL }}">GO TO MAP >></a>
+            </p>
         </div>
     </li>
     <li>
