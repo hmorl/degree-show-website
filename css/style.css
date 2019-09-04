@@ -41,8 +41,9 @@ ul#artist-names {
 ul#artist-names li {
     display: inline-block;
     margin: 0;
+    margin-top: 1.2em;
     padding: 0;
-    width: 25ch;
+    width: 22ch;
     vertical-align: top;
 }
 
@@ -321,5 +322,10 @@ span.surveillance {
 @media (max-width: 767px) {
     .timings-padding {
         display: none;
+    }
+
+    ul#artist-names li {
+
+        margin-top: 0;
     }
 }
