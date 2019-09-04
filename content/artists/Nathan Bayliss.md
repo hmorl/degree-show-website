@@ -1,6 +1,9 @@
 ---
 title: Nathan Bayliss
 threads: [Intelligence,Narration]
+links: 
+    - name: practice.nathanbayliss.tv
+      url: http://practice.nathanbayliss.tv
 
 draft: false
 ---
