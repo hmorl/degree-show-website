@@ -110,7 +110,7 @@ SECOND FLOOR
 - - - -#<span id="traver" class="map_name">Laura Traver</span> - *** - - - - - - - - - - - - - - - - - # - - - - - - - - -#<br>
 - - - -# - - - - - - - -*- - - - - - - - - - - - - - - - - - # - - - - - - - - -###################################<br>
 - - - -# - - - - - - - - - - - - - - - - - - - - - - - - - - # - - - - - - - - -# - - - - - - - - - - - - - - - - #<br>
-- - - -# - - - - - - - - - - - - - - - - - - - - - - - - - - # - - - - - - - - -# - <span id="lu" class="map_name">Dongyuan Lu</span> - - - - - - - - - #<br>
+- - - -# - - - - - - - - - - - - - - - - - - - - - - - - - - # - - - - - - - - -# - <span id="liu" class="map_name">Dongyuan Liu</span> - - - - - - - - - #<br>
 - - - -# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -# - - - - - - - - - - - - - - - - #<br>
 - - - -# <span id="alsaleh" class="map_name">Daniah Alsaleh</span> - - ------- - - - - - - - - - - - - - -################## - - - - - - - - - - - Taoran Xu #<br>
 - - - -# - - - - - - - - - - LIFT--- - - - - - <span id="shuai" class="map_name">Shuai Xu</span> - - - -# - - - - - - - -# - - - - - - - - - - - - - - - - #<br>
@@ -166,7 +166,21 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-var highlightName = getParameterByName('highlight', url).split("-")[1];
+var urlQuery = getParameterByName('highlight', url).split("-");
+var highlightName;
+
+if(urlQuery[0] == "shuai" || urlQuery[0] == "taoran"){
+    highlightName = urlQuery[0];
+}else {
+    
+    if(urlQuery[1].includes("bel")){
+        highlightName = "gobel";
+    }else if(urlQuery[1].includes("dne")){
+        highlightName = "tadne";
+    }else{
+        highlightName = urlQuery[1];
+    }
+}
 
 if(highlightName.length != 0){
     document.getElementById(highlightName).classList.add("active");
