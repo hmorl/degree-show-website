@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Artists on So, How Is That Working For You?</title>
-    <link>/artists/</link>
-    <description>Recent content in Artists on So, How Is That Working For You?</description>
+    <title>So, How Is That Working For You?</title>
+    <link>/</link>
+    <description>Recent content on So, How Is That Working For You?</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-GB</language>
+    <lastBuildDate>Fri, 28 Jun 2019 14:46:55 +0100</lastBuildDate>
     
-	<atom:link href="/artists/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Fri, 28 Jun 2019 14:46:55 +0100</pubDate>
+      
+      <guid>/about/</guid>
+      <description>←
+The MA/MFA Computational Arts final exhibition So, how is that working for you? aims to interrogate the relational tensions playing out within the newly-formed spaces of artistic and technological collaboration. Reflecting on critical provocations of what it means to create computationally, particularly in the current state of technological augmentations permeating the deeper substrates of our human existence, we ask the open-ended question: So, how is that working for you? in order to probe the potentiality of dislodging computation from its status as an instrument of increasingly coercive control and repurposing it within artistic discourses that aim to open up new avenues for alternative technological narratives.</description>
+    </item>
+    
+    <item>
+      <title>Info</title>
+      <link>/info/</link>
+      <pubDate>Fri, 28 Jun 2019 14:46:55 +0100</pubDate>
+      
+      <guid>/info/</guid>
+      <description>←
+DATES: Thursday 5th—Sunday 8th Sept 2019
+LOCATION: St. James Hatcham Church, London SE14 6AD
+RSVP: Click here (Eventbrite)
+TIMES:
+ THURSDAY 5pm&amp;mdash;10pm &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; Performances: 7:00pm Irini &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Kalaitzidi 7:15pm Taoran Xu 7:30pm Benjamin &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Sammon 7:45pm Valeria &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Radchenko 8:00pm Chris Speed 8:15pm David &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Williams 8:30pm Christina &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Karpodini 8:45pm Andy Wang 9:00pm Adam He   FRIDAY 11am&amp;mdash;8pm &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; Performances:
+5:00pm Irini Kalaitzidi 5:20pm Taoran Xu
+5:40pm Benjamin Sammon
+6:00pm Valeria Radchenko 6:30pm Chris Speed 6:50pm David Williams 7:10pm Christina Karpodini 7:30pm Andy Wang 7:50pm Adam He</description>
+    </item>
+    
+    <item>
+      <title>Map</title>
+      <link>/map/map/</link>
+      <pubDate>Fri, 28 Jun 2019 14:46:55 +0100</pubDate>
+      
+      <guid>/map/map/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Abi Price</title>
