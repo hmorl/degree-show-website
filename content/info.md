@@ -10,7 +10,7 @@ DATES: Thursday 5th&mdash;Sunday 8th Sept 2019
 LOCATION: [St. James Hatcham Church, London SE14 6AD](https://goo.gl/maps/NnGA3tGva1bGYWHH8)  
 RSVP: Click [here](https://www.eventbrite.com/e/goldsmiths-computational-arts-mamfa-degree-show-2019-tickets-68690778969) (Eventbrite)<br/>
 
-TIMES:
+<p>TIMES:</p>
 
 <ul id = "timings-grid">
 <li>
@@ -23,7 +23,7 @@ Performances:<br/><br/>
 7:30pm Benjamin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sammon<br/>  
 7:45pm Valeria &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radchenko<br/>
 8:00pm Chris Speed<br/>
-8:15pm David Williams<br/> 
+8:15pm David &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Williams<br/> 
 8:30pm Christina &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Karpodini<br/>
 8:45pm Andy Wang<br/> 
 9:00pm Adam He<br/><br/><br/>
@@ -42,16 +42,17 @@ Performances:<br/><br/>
 5:40pm Benjamin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sammon<br/>  
 6:00pm Valeria &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radchenko<br/>
 6:30pm Chris Speed<br/>
-6:50pm David Williams<br/> 
+6:50pm David &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Williams<br/> 
 7:10pm Christina &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Karpodini<br/>
 7:30pm Andy Wang<br/> 
 7:50pm Adam He<br/><br/>
 
+<span class="timings-padding"><br/></span>
+
 Talks:<br/><br/>
 3pm&mdash;4pm<br/>
 Artist Talk (<span class = 'intelligence'><a href="/about/#about-thread-grid">INTELLIGENCE</a></span>)<br/>
-With Ankita Anand, Teodora Fartan and Julien Mercier<br/><br/><br/>
-<span class="timings-padding"><br/><br/></span>
+With Ankita Anand, Teodora Fartan and Julien Mercier<br/><br/>
 
 Workshops:<br/><br/>
 
@@ -75,9 +76,21 @@ Performances:<br/><br/>
 11:55am Benjamin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sammon<br/>  
 12:15pm Valeria &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radchenko<br/>
 12:40pm Chris Speed<br/>
-&nbsp;1:00pm David Williams<br/> 
+&nbsp;1:00pm David &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Williams<br/> 
 &nbsp;1:20pm Andy Wang<br/> 
 &nbsp;1:40pm Adam He<br/><br/>
+
+&mdash;&mdash;&mdash;<br/><br/>
+
+&nbsp;5:00pm Irini &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kalaitzidi<br/>
+&nbsp;5:20pm Taoran Xu<br/>  
+&nbsp;5:40pm Benjamin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sammon<br/>  
+&nbsp;6:00pm Valeria &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radchenko<br/>
+&nbsp;6:30pm Chris Speed<br/>
+&nbsp;6:50pm David &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Williams<br/> 
+&nbsp;7:10pm Christina &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Karpodini<br/>
+&nbsp;7:30pm Andy Wang<br/> 
+&nbsp;7:50pm Adam He<br/><br/>
 
 <span class="timings-padding"><br/></span>
 
@@ -105,16 +118,23 @@ SUNDAY<br>
 
 Performances:<br/><br/>
 
-Same as Saturday.<br/>
+11:15am Irini &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kalaitzidi<br/>
+11:35am Taoran Xu<br/>  
+11:55am Benjamin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sammon<br/>  
+12:15pm Valeria &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Radchenko<br/>
+12:40pm Chris Speed<br/>
+&nbsp;1:00pm David &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Williams<br/> 
+&nbsp;1:20pm Andy Wang<br/> 
+&nbsp;1:40pm Adam He<br/><br/>
 
-<span class="timings-padding"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></span>
+<span class="timings-padding"><br/></span>
 
 Talks:<br/><br>
 4pm&mdash;5pm Panel Discussion TBA<br/><br/><br/>
 </li>
 </ul>
 
-WORKSHOP INFO:
+<p>WORKSHOP INFO:</p>
 
 <ul id = "workshop-info">
 <li>Dance workshop - experience BOTHER from the point of view of the performer.<br/><br/>

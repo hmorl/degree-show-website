@@ -59,7 +59,7 @@ ul#artist-info li {
     display: inline-block;
     margin: 0;
     padding: 0;
-    max-width: 47ch;
+    max-width: 48ch;
     vertical-align: top;
 }
 
@@ -91,7 +91,7 @@ ul#timings-grid li {
     display: inline-block;
     margin: 0;
     padding: 0;
-    max-width: 22ch;
+    max-width: 20ch;
     vertical-align: top;
 }
 
@@ -231,7 +231,7 @@ div#artist-list {
 div#artist-details {
     margin: 0;
     padding:0;
-    width: 24ch;
+    width: 26ch;
     word-wrap: break-word;
 }
 
@@ -257,7 +257,7 @@ a {
 }
 
 #single-content a {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .active {
