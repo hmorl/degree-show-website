@@ -107,7 +107,7 @@ var names = document.getElementsByClassName("map_name");
 for(let i = 0; i < names.length; i++) {
     let nameString = names[i].innerText;
     let nameURL = names[i].innerText.replace(" ", "-").toLowerCase();
-    names[i].innerHTML = "<a href='/artists/" + nameURL + "'>" + nameString + "</a>";  
+    names[i].innerHTML = "<a href='/artists/" + nameURL + "/'>" + nameString + "</a>";  
 }
 
 var url = window.location;

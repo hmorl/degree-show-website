@@ -1,6 +1,6 @@
 ---
 title: Shuai Xu
-threads: [Matter,Intelligence,Embodiement]
+threads: [Matter,Intelligence,Embodiment]
 
 draft: false
 ---

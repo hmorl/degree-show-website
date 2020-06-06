@@ -1,6 +1,13 @@
 ---
 title: Panja Göbel
 threads: [Surveillance,Intelligence,Embodiment]
+links: 
+    - name: panjapop.tumblr.com
+      url: http://panjapop.tumblr.com
+    - name: panjapop.com
+      url: http://panjapop.com
+    - name: "@booleanhairloop" 
+      url: https://instagram.com/booleanhairloop
 
 draft: false
 ---

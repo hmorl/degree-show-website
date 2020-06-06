@@ -1,6 +1,11 @@
 baseURL = "/"
 languageCode = "en-GB"
 title = "So, How Is That Working For You?"
+relativeURLs = true
+canonifyURLs = true
+
+[markup.goldmark.renderer]
+unsafe = true
 
 [params]
     description = "Goldsmiths Computational Arts 2019"
@@ -41,7 +46,3 @@ title = "So, How Is That Working For You?"
     name = "\uF083"
     url = "https://www.instagram.com/goldsmithscomparts"
     weight = 3
-
-[blackfriday]
-  plainIDAnchors = true
-  hrefTargetBlank = true

@@ -8,7 +8,7 @@
 {{- if ne $elem_index 0 -}}
 {{- if eq (mod $elem_index 20) 0 -}}</li><li>{{- end -}}
 {{- end -}}
-<a href="{{- .URL -}}">{{ .Title }}<br></a>
+<a href="{{- .Permalink -}}">{{ .Title }}<br></a>
 {{- end -}}
 </ul>
 </div>

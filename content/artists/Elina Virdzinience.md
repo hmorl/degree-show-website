@@ -1,6 +1,6 @@
 ---
 title: Elina Virdzinience
-threads: []
+threads: [Network,Matter,Narration]
 
 draft: false
 ---
